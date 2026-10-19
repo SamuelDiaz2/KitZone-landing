@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { track } from '../utils/track';
 
 export default function CtaPrimary() {
     // Temporizador regresivo de ejemplo (24 horas)
@@ -66,11 +67,12 @@ export default function CtaPrimary() {
                     </div>
 
                     <div>
-                        <a
+                       <a
                             href="#hero"
+                            onClick={() => track('cta_primary_click', { cta_location: 'cta_1' })}
                             className="inline-block px-8 py-4 rounded-xl bg-white text-[#0052FF] font-extrabold text-lg hover:bg-[#00D2FF] hover:text-slate-950 transition-all shadow-xl shadow-black/20 transform hover:-translate-y-0.5"
                         >
-                            Reclamar Descuento Ahora
+                        Reclamar Descuento Ahora
                         </a>
                     </div>
 
