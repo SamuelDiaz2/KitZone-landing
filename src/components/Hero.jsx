@@ -30,10 +30,11 @@ export default function Hero() {
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-                            Viste la pasión. <br />
+                            Camisetas de fútbol <br />
                             <span className="bg-gradient-to-r from-[#00D2FF] via-[#0052FF] to-blue-400 bg-clip-text text-transparent">
-                                Personaliza tu camiseta
-                            </span> al nivel profesional.
+                                personalizadas
+                            </span>{' '}
+                            a tu estilo.
                         </h1>
 
                         <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
