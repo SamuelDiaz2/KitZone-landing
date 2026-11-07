@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kit-zone-eosin.vercel.app/sitemap.xml

@@ -36,12 +36,12 @@ export default function Faq() {
 
                 {/* Encabezado */}
                 <div className="text-center mb-16">
-                    <h2 className="text-xs font-bold text-[#00D2FF] tracking-widest uppercase mb-3">
+                    <p className="text-xs font-bold text-[#00D2FF] tracking-widest uppercase mb-3">
                         Dudas Frecuentes
-                    </h2>
-                    <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                        Preguntas Frecuentes
                     </p>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                        Preguntas frecuentes sobre camisetas de fútbol
+                    </h2>
                     <p className="mt-4 text-slate-400 text-base sm:text-lg">
                         Todo lo que necesitas saber antes de personalizar tu camiseta.
                     </p>
@@ -57,7 +57,10 @@ export default function Faq() {
                                 className="bg-[#070b19] border border-[#0052FF]/20 rounded-2xl overflow-hidden transition-colors"
                             >
                                 <button
+                                    type="button"
                                     onClick={() => toggleAccordion(index)}
+                                    aria-expanded={isOpen}
+                                    aria-controls={`faq-answer-${index}`}
                                     className="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none"
                                 >
                                     <span className="font-bold text-white text-base sm:text-lg">
@@ -70,11 +73,13 @@ export default function Faq() {
                                     </span>
                                 </button>
 
-                                {isOpen && (
-                                    <div className="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
-                                        {faq.answer}
-                                    </div>
-                                )}
+                                <div
+                                    id={`faq-answer-${index}`}
+                                    hidden={!isOpen}
+                                    className="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4"
+                                >
+                                    {faq.answer}
+                                </div>
                             </div>
                         );
                     })}
